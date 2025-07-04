@@ -75,7 +75,7 @@ class Player(pygame.sprite.Sprite):
                 self.rect.bottom > SCREEN_HEIGHT)
     
     def check_collision(self):
-        """Check collision with level tiles"""
+        """Check collision with room tiles"""
         corners = [
             (self.rect.left, self.rect.top),
             (self.rect.right - 1, self.rect.top),
@@ -84,8 +84,8 @@ class Player(pygame.sprite.Sprite):
         ]
         
         for x, y in corners:
-            tile_type = self.level.get_tile_at_pos(x, y)
-            pass
+            if not self.level.is_walkable(x, y):
+                return True  # Hit a wall
         
         return False
     

@@ -23,3 +23,19 @@ DOWN = 0  # Facing camera
 UP = 1    # Facing away
 LEFT = 2  # Facing left
 RIGHT = 3 # Facing right (mirrored left)
+
+# Dungeon tile types
+FLOOR = 0
+WALL = 1
+DOOR = 2
+
+# Dungeon settings
+ROOM_WIDTH = GRID_WIDTH
+ROOM_HEIGHT = GRID_HEIGHT
+MAX_ROOMS = 10
+
+# Door positions (for room connections)
+DOOR_TOP = 0
+DOOR_BOTTOM = 1
+DOOR_LEFT = 2
+DOOR_RIGHT = 3
