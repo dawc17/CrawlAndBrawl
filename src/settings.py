@@ -1,5 +1,5 @@
 SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_HEIGHT = 576  # 18 tiles * 32 pixels = 576 (was 600)
 FPS = 60
 
 # Tile settings
@@ -13,3 +13,13 @@ DIRT = 1
 STONE = 2
 DARK_GRASS = 3
 FLOWER_GRASS = 4
+
+# Player settings
+PLAYER_SPEED = 3
+PLAYER_SIZE = 24
+
+# Player directions (for sprite animation)
+DOWN = 0  # Facing camera
+UP = 1    # Facing away
+LEFT = 2  # Facing left
+RIGHT = 3 # Facing right (mirrored left)

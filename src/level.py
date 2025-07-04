@@ -46,7 +46,6 @@ class Level:
                     tile_surface = pygame.Surface((TILE_SIZE, TILE_SIZE), pygame.SRCALPHA)
                     tile_surface.blit(tileset_image, (0, 0), (x, y, TILE_SIZE, TILE_SIZE))
                     
-                    # Store tiles we'll use
                     if tile_index < 10:
                         self.tiles[tile_index] = tile_surface
                     
@@ -54,7 +53,6 @@ class Level:
                     
         except pygame.error as e:
             print(f"Could not load tileset: {e}")
-            # Create fallback colored tiles
             self.create_fallback_tiles()
     
     def create_fallback_tiles(self):
